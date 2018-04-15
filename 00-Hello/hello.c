@@ -2,7 +2,7 @@
  ============================================================================
  Name        : hello.c
  Author      : Luciano Glielmi
- Version     :
+ Version     : 01
  Copyright   : Your copyright notice
  Description : Hello World in C, Ansi-style
  ============================================================================
