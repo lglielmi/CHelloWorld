@@ -33,7 +33,7 @@ collect2.exe: error: ld returned 1 exit status
 **Comando8 cc hello5.i -S -o hello5.s**  
 **Comando9 cc hello5.s -C -o hello5.o**  
 **Comando10 cc hello5.o -C -o hello5**  
-*Respuesta>* La ejecución de los comandos 7, 8 0 y 10 da como resultado la generación del archivo que le correspondía a cada uno sin ningún mensaje de advertencia o error. Al ejecutar el hello5.exe generado por el comando10 la respuesta fue: "La respuesta es 44897120". Se debe a que nunca se pasó la variable i como parametro en printf, por lo tanto se imprime cualquier otra cosa que esté en memoria.  
+*Respuesta>* La ejecución de los comandos 7, 8, 9 y 10 da como resultado la generación del archivo que le correspondía a cada uno sin ningún mensaje de advertencia o error. Al ejecutar el hello5.exe generado por el comando10 la respuesta fue: "La respuesta es 44897120". Se debe a que nunca se pasó la variable i como parametro en printf, por lo tanto se imprime cualquier otra cosa que esté en memoria.  
 **Comando11 cc hello6.c -E -P -o hello6.i  
 Comando12 cc hello6.i -S -o hello6.s  
 Comando13 cc hello6.i -c -o hello6.o   
