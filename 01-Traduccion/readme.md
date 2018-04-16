@@ -35,12 +35,12 @@ collect2.exe: error: ld returned 1 exit status
 **Comando10** cc hello5.o -C -o hello5  
 *Respuesta>* La ejecución de los comandos 7, 8 0 y 10 da como resultado la generación del archivo que le correspondía a cada uno sin ningún mensaje de advertencia o error. Al ejecutar el hello5.exe generado por el comando10 la respuesta fue: "La respuesta es 44897120". Se debe a que nunca se pasó la variable i como parametro en printf, por lo tanto se imprime cualquier otra cosa que esté en memoria.  
 **Comando11** cc hello6.c -E -P -o hello6.i      
-**Comando12** cc hello6.i -S -o hello6.s 
+**Comando12** cc hello6.i -S -o hello6.s  
 **Comando13** cc hello6.i -c -o hello6.o   
 **Comando14** cc hello6.o -o hello6 
-*Respuesta>* Los comandos 11, 12, 13, y 14 generan los archivos correspondientes sin ningún error ni advertencia. Al ejecutar hello6.exe la respuesta fue: "La respuesta es 42".
+*Respuesta>* Los comandos 11, 12, 13, y 14 generan los archivos correspondientes sin ningún error ni advertencia. Al ejecutar hello6.exe la respuesta fue: "La respuesta es 42".  
 **Comando15** cc hello7.c -E -P -o hello7.i  
-*Respuesta>* Genera hello7.i sin errores.
+*Respuesta>* Genera hello7.i sin errores.  
 **Comando16** cc hello7.i -S -o hello7.s  
 *Respuesta>* Se genera el archivo hello7.s pero con varios warning porque no se declaró a printf ni tampoco a las librerías que la contienen, resultando ser una declaración implicita de esta función. En una nota en los mensajes de error, aclara que se encuentra en el include studio.h  
 hello7.i: In function 'main':  
@@ -56,6 +56,6 @@ hello7.i:3:2: warning: implicit declaration of function 'printf' [-Wimplicit-fun
   printf("La respuesta es %d\n", i);
   ^~~~~~
 hello7.i:3:2: warning: incompatible implicit declaration of built-in function 'printf'
-hello7.i:3:2: note: include '<stdio.h>' or provide a declaration of 'printf'
+hello7.i:3:2: note: include '<stdio.h>' or provide a declaration of 'printf'  
 **Comando18** cc hello7.o -o hello7  
 *Respuesta>* Se genera el archivo hello7.exe, sin ningún mensaje. Al ejecutarlo imprime por pantalla "La respuesta es 42" como era deseado.
