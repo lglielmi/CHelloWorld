@@ -15,7 +15,8 @@ hello3.i:4:2: warning: implicit declaration of function 'prontf' [-Wimplicit-fun
 hello3.i:4:2: error: expected declaration or statement at end of input  
   
  Retornó un warning por la declaración implicita de la funcion prontf y un error porque nunca se cierra la llave en el programa.
- *Respuesta en carpeta>* No genera archivo hello3.s    
+ *Respuesta en carpeta>* No genera archivo hello3.s  
+ *Investigación semantica primer linea* **pendiente agregar**
  **Comando 4 cc hello4.c -E -P -o hello4.i**  
  En hello4.c se cerró la llave que faltaba en hello3.c    
  *Resultado>* Genera archivo hello4.i    
@@ -59,3 +60,4 @@ hello7.i:3:2: warning: incompatible implicit declaration of built-in function 'p
 hello7.i:3:2: note: include '<stdio.h>' or provide a declaration of 'printf'  
 **Comando18 cc hello7.o -o hello7**  
 *Respuesta>* Se genera el archivo hello7.exe, sin ningún mensaje. Al ejecutarlo imprime por pantalla "La respuesta es 42" como era deseado.
+*Porque Funciona* **agregado**
