@@ -5,7 +5,8 @@
 **Comando 2 cc hello3.c -E -P -o hello3.i**  
 *Respuesta en consola>* ninguna  
 *Respuesta en carpeta>* genera archivo hello3.i    
-*Comparación entre hello3.c y hello3.i>* Entre hello3.i y hello3.c no hay diferencias (excepto por los comentarios de cabecera que fueron eliminados en hello3.i, pero es un caso particular mio debido a que yo cree a hello3.c así).    
+*Comparación entre hello3.c y hello3.i>* Entre hello3.i y hello3.c no hay diferencias (excepto por los comentarios de cabecera que fueron eliminados en hello3.i, pero es un caso particular mio debido a que yo cree a hello3.c así). 
+*Investigación semantica primer linea* Se declara la función printf, la cual recibirá como parametros una cadena de caracteres como y (de manera opcional) otros parametros que se utilizarán dentro de la cadena.  
 **Comando 3 cc hello3.i -S -o hello3.s**  
 *Respuesta en consola>*  
 hello3.i: In function 'main':  
@@ -13,10 +14,8 @@ hello3.i:4:2: warning: implicit declaration of function 'prontf' [-Wimplicit-fun
   prontf("La respuesta es %d\n");  
   ^~~~~~  
 hello3.i:4:2: error: expected declaration or statement at end of input  
-  
  Retornó un warning por la declaración implicita de la funcion prontf y un error porque nunca se cierra la llave en el programa.
  *Respuesta en carpeta>* No genera archivo hello3.s  
- *Investigación semantica primer linea* **pendiente agregar**
  **Comando 4 cc hello4.c -E -P -o hello4.i**  
  En hello4.c se cerró la llave que faltaba en hello3.c    
  *Resultado>* Genera archivo hello4.i    
@@ -60,4 +59,4 @@ hello7.i:3:2: warning: incompatible implicit declaration of built-in function 'p
 hello7.i:3:2: note: include '<stdio.h>' or provide a declaration of 'printf'  
 **Comando18 cc hello7.o -o hello7**  
 *Respuesta>* Se genera el archivo hello7.exe, sin ningún mensaje. Al ejecutarlo imprime por pantalla "La respuesta es 42" como era deseado.
-*Porque Funciona* **agregado**
+*Porque Funciona* dado que printf pertenece a la biblioteca estandar, por más que ella no este siendo invocada con un #include, al generar el ejecutable se recuperó su funcionalidad (es decir, va a buscar su código de todas maneras).
