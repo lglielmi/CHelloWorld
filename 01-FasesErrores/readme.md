@@ -59,4 +59,4 @@ hello7.i:3:2: warning: incompatible implicit declaration of built-in function 'p
 hello7.i:3:2: note: include '<stdio.h>' or provide a declaration of 'printf'  
 **Comando18 cc hello7.o -o hello7**  
 *Respuesta>* Se genera el archivo hello7.exe, sin ningún mensaje. Al ejecutarlo imprime por pantalla "La respuesta es 42" como era deseado.
-*Porque Funciona* dado que printf pertenece a la biblioteca estandar, por más que ella no este siendo invocada con un #include, al generar el ejecutable se recuperó su funcionalidad (es decir, va a buscar su código de todas maneras).
+*Porque Funciona* dado que printf pertenece a la biblioteca estandar, por más que ella no este siendo invocada con un #include, al generar el ejecutable se recuperó su funcionalidad (es decir, va a buscar su código de todas maneras). **corrección en clase:** Se declara implicitamente dado que antes pertenecía al estandar. Ahora es "requerida" su declaración pero de todas maneras funcionará.
